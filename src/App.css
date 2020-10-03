@@ -1,38 +1,200 @@
-.App {
+body {
+  margin: 0;
+  padding: 10px;
+
+  font-family: 'Arial', cursive;
+  background-color: #ecf4f3
+
+}
+
+h1 {
+  font-family: 'Eater', cursive;
+  font-size: 40px;
+}
+
+p {
+  font-size: 20px;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
+}
+
+.mt-50 {
+  margin-top: 50px !important;
+}
+
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  .desktop { display: none; }
+  .mobile { display: block; }
+}
+
+@media screen and (min-width: 501px){
+  .desktop { display: block; }
+  .mobile { display: none; }
+}
+
+@media screen and (min-width: 501px) and (max-width: 818px) {
+  .middle {display: block;}
+}
+
+@media screen and (min-width: 817px) {
+  .middle {display: none;}
+}
+
+@media screen and (max-width: 500px) {
+  .middle { display: none; }
+}
+
+.mobile h5 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.row {
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  -ms-flex-pack: center;
+      justify-content: center
+}
+
+.cell {
+  height: 30px;
+  width: 30px;
+  border: 3px solid white;
+  padding: 1px;
+  border-radius: 9px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.white {
+  background-color: #625261;
+}
+
+.restore {
+  background-color: #625261;
+}
+.green {
+  background-color: lightgreen;
+}
+.remove {
+  background-color: white;
+}
+.cell p {
+  margin: 0;
+  padding: 5px;
+}
+
+.mine, .flag {
+  width: 100%;
+  height: 100%;
+}
+
+.center {
+  text-align: center;
+}
+
+
+
+h3 { text-align:  center; font-size: 30px;}
+
+.Game {
+  text-align: center;
+}
+label {
+  font-size: 20px;
+}
+
+.Grid {
+  width: 100%;
+}
+
+.grid-container, .stat{
+  text-align: center;
+}
+
+.buttons {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  text-align: center;
+}
+
+.button {
+  width: 100px;
+  height: 50px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  border-top: 3px solid black;
+  background: #30475e;
+  margin: 10px 0 10px 0;
+  font-size: 16px;
+  -webkit-transition: width 0.4s ease-in-out;
+  -o-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+.button p {
+  margin: 0;
+}
+
+.button-wide {
+  width: 150px;
+  height: 50px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  background: #30475e;
+  color: #fff;
+  margin: 10px;
+  font-size: 25px;
+}
+
+.active {
+  background: #30475e;
+  color: #fff;
+  width: 200px;
+}
+
+.active:hover {
+  background: #ae2a2a !important;
+  color: #fff;
+}
+
+.button:hover {
+  background-color: #2e4449;
   color: white;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.button-wide:hover {
+  background-color: #2e4449;
+  color: white;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pale-button {
+  background-color: #796b6b;
 }

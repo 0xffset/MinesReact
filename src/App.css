@@ -1,10 +1,8 @@
 body {
   margin: 0;
   padding: 10px;
-
   font-family: 'Arial', cursive;
   background-color: #ecf4f3
-
 }
 
 h1 {
@@ -25,25 +23,41 @@ p {
 }
 
 @media screen and (min-width: 0px) and (max-width: 500px) {
-  .desktop { display: none; }
-  .mobile { display: block; }
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
 }
 
-@media screen and (min-width: 501px){
-  .desktop { display: block; }
-  .mobile { display: none; }
+@media screen and (min-width: 501px) {
+  .desktop {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 501px) and (max-width: 818px) {
-  .middle {display: block;}
+  .middle {
+    display: block;
+  }
 }
 
 @media screen and (min-width: 817px) {
-  .middle {display: none;}
+  .middle {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 500px) {
-  .middle { display: none; }
+  .middle {
+    display: none;
+  }
 }
 
 .mobile h5 {
@@ -54,7 +68,7 @@ p {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
-      justify-content: center
+  justify-content: center
 }
 
 .cell {
@@ -66,11 +80,11 @@ p {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
-      flex-direction: column;
+  flex-direction: column;
   -ms-flex-align: center;
-      align-items: center;
+  align-items: center;
   -ms-flex-line-pack: center;
-      align-content: center;
+  align-content: center;
 }
 
 .red {
@@ -88,12 +102,15 @@ p {
 .restore {
   background-color: #625261;
 }
+
 .green {
   background-color: lightgreen;
 }
+
 .remove {
   background-color: white;
 }
+
 .cell p {
   margin: 0;
   padding: 5px;
@@ -108,13 +125,15 @@ p {
   text-align: center;
 }
 
-
-
-h3 { text-align:  center; font-size: 30px;}
+h3 {
+  text-align: center;
+  font-size: 30px;
+}
 
 .Game {
   text-align: center;
 }
+
 label {
   font-size: 20px;
 }
@@ -123,7 +142,7 @@ label {
   width: 100%;
 }
 
-.grid-container, .stat{
+.grid-container, .stat {
   text-align: center;
 }
 
@@ -131,7 +150,7 @@ label {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
-      justify-content: center;
+  justify-content: center;
   text-align: center;
 }
 
@@ -141,12 +160,11 @@ label {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
-      flex-direction: column;
+  flex-direction: column;
   -ms-flex-pack: center;
-      justify-content: center;
+  justify-content: center;
   border-top: 3px solid black;
   background: #30475e;
-  margin: 10px 0 10px 0;
   font-size: 16px;
   -webkit-transition: width 0.4s ease-in-out;
   -o-transition: width 0.4s ease-in-out;
@@ -163,38 +181,20 @@ label {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
-      flex-direction: column;
+  flex-direction: column;
   -ms-flex-pack: center;
-      justify-content: center;
+  justify-content: center;
   background: #30475e;
   color: #fff;
   margin: 10px;
   font-size: 25px;
+  border-radius: 20px;
 }
 
-.active {
-  background: #30475e;
-  color: #fff;
-  width: 200px;
-}
-
-.active:hover {
-  background: #ae2a2a !important;
-  color: #fff;
-}
-
-.button:hover {
-  background-color: #2e4449;
-  color: white;
+. .button:hover {
   cursor: pointer;
 }
 
 .button-wide:hover {
-  background-color: #2e4449;
-  color: white;
   cursor: pointer;
-}
-
-.pale-button {
-  background-color: #796b6b;
 }

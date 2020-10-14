@@ -17,8 +17,8 @@
 </div>
 
 ### Paper files
-* Latex -->
-* PDF   -->
+* Latex --> [go](/docs/paper.tex)
+* PDF   --> [go](/docs/paper.md)
 
 ### Installation 
 ~~~

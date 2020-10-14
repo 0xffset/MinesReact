@@ -16,7 +16,7 @@
 <p>In this paper, we explore different mathematical approaches in Minesweeper like computa-tional algorithms, NP-Complexity, and matrix analysis. In the processes, I present strategiesto satisfy computational complex algorithms such as heuristic h-neighbor adjacent.</p>
 </div>
 
-### Papers files
+### Paper files
 * Latex -->
 * PDF   -->
 

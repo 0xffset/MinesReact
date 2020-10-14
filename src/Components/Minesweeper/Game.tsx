@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Grid from './Grid'
-import Abstract from './../Contents/Abstract.js'
 
 const { Generator, Check } = require('./Helpers/helpers.tsx')
 
@@ -54,7 +53,7 @@ export default class Game extends Component<IProps, IState> {
 	return (
       <>
         <div>{content}</div>
-				<Abstract/>
+				
       </>
     );
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Game from './Components/Minesweeper/Game'
+import Game from './components/Minesweeper/Game'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(

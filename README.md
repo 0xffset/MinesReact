@@ -18,11 +18,11 @@
 
 ### Paper files
 * Latex --> [go](/docs/paper.tex)
-* PDF   --> [go](/docs/paper.md)
+* PDF   --> [go](/docs/paper.pdf)
 
 ### Installation 
 ~~~
-# git clone repo && cd folder
+# git https://github.com/RolEYder/MinesReact.git && cd MinesReact
 # npm install 
 ~~~
 

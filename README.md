@@ -9,7 +9,6 @@
 </div>
 <br>
 <br>
-[![Netlify Status](https://api.netlify.com/api/v1/badges/badca744-a122-42fa-9196-673d24a6a17c/deploy-status)](https://app.netlify.com/sites/minesreact/deploys)
 <div align="center">
   <h2>Abstract</h1>
 </div>

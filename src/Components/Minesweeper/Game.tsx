@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Grid from './Grid'
 
-const { Generator, Check } = require('./Helpers/helpers.tsx')
+const { Generator, Check } = require('./utils/utils.tsx')
 
 interface IState {
   grid?: [],
@@ -34,7 +34,7 @@ export default class Game extends Component<IProps, IState> {
 
   }
   componentWillMount() {
-		document.title =  "Minesweeper - Maths begind it";
+		document.title =  "MinesReact";
 		this.play()
   }
   render() {
@@ -53,7 +53,7 @@ export default class Game extends Component<IProps, IState> {
 	return (
       <>
         <div>{content}</div>
-				
+
       </>
     );
 

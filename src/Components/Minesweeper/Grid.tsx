@@ -1,6 +1,6 @@
 import React from 'react'
 import Row from './Row'
-
+import Abstract from './../Contents/Abstract'
 const Grid = (props: any) => {
   const rows = props.grid.map((a: number, i: number) => {
 
@@ -19,7 +19,7 @@ const Grid = (props: any) => {
     )
   })
 
-const wonButton = props.status !== 'playing' ? (
+  const wonButton = props.status !== 'playing' ? (
     <div className='buttons'>
       <div className='button-wide' onClick={props.playAgain}>
         <p>PLAY AGAIN</p>
@@ -27,16 +27,22 @@ const wonButton = props.status !== 'playing' ? (
     </div>
   ) : ''
   return (
-    <div className='grid-cointainer'>
-      <h3>Minesweeper</h3>
-      <div className='grid'>
-        <div className='stat'>
-          <label> {props.mines} mines count</label>
+    <>
+      <div className='grid-cointainer'>
+        <h3>MinesReact</h3>
+        <div className='grid'>
+          <div className='stat'>
+            <label> {props.mines} mines count</label>
+          </div>
+          {rows}
         </div>
-        {rows}
+        {wonButton}
       </div>
-      {wonButton}
-    </div>
+
+      <div>
+        <Abstract />
+      </div>
+    </>
   )
 }
 

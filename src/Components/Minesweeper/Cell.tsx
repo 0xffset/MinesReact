@@ -1,6 +1,7 @@
 import React from 'react'
 import './../../App.css'
 
+
 const Cell = (props: any) => {
   let contents: any = []
   let color = 'white'

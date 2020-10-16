@@ -40,21 +40,23 @@ In this paper, we explore different mathematical approaches in Minesweeper like 
 \vspace{5mm} %5mm vertical space
 
 Go, Sudoku, some of the many games that have fascinated and challenged mathematicians and scientists.  A game may be straightforward to play or a simple set of rules that a young boy could understand, but sometimes is the simplest things that have great things; emerging complex and intriguing problems, taking us to unexpected mathematical fields.
-When game researchers try to find techniques to understand how something works, sometimes it is needed to build mechanisms to get it. For example, AlphaGO is a computer video game that plays the board game Go .  AlphaGO is capable of tackling problems similar to a human, analyzing patterns in humans, working with a combination of machine learning techniques and tree search algorithms.
+When game researchers try to find techniques to understand how something works, sometimes it is needed to build mechanisms to get it. For example, AlphaGO is a computer video game that plays the board game Go.  AlphaGO is capable of tackling problems similar to a human, analyzing patterns in humans, working with a combination of machine learning techniques and tree search algorithms.
 Chess. This game had fascinated computer science researchers, for how to successfully tackle each move human to formulate an Artificial Intelligent to win him. In the same sense, Deep Blue was a chess-playing computer developed by IBM that was capable of defeating the world chess champion, Gary Kasparov, in February of 1989.
 Minesweeper is another example of simple playing rules. In fact,  Minesweeper is in a class of mathematical difficult problems known as NP-complete, these classes problems form part of Millennium Problems that may be earned by Clay Mathematics Institute with 1 million dollars if you demonstrate its solution.
 
+
 \vspace{5mm} %5mm vertical space
-In this paper, I will analyze different mathematical approaches designing algorithms and a matrix analysis that refers to Minesweeper. I will first provide a brief description of the game in \nameref{chap:1}, in the \nameref{chap:2} Gauss Elimination Approach; \nameref{chap:3}  NP-Complexity, and Chapter 4 Algorithm analysis . 
+In this paper, I will analyze different mathematical approaches to designing algorithms and a matrix analysis that refers to Minesweeper. I will first provide a brief description of the game in \nameref{chap:1}, in the \nameref{chap:2} Gauss Elimination Approach, and in the  \nameref{chap:3}  NP-Complexity.
 
 \section{Session One} \label{chap:1}
 
 \subsection{Minesweeper Overview}
-Minesweeper is a simple-player puzzle video game developed by Robert Donner in 1989. The game consists in a $n$ x $m$ of grid-covered squares when the player must explore through a square revealing  either a mine or an integer. This integer represents the number of mines adjacent to that clicked square. The game ends when the player probes a cell containing a mine, and the goal is to prove all uncovered squares that do not contain a mine. 
+Minesweeper is a simple-player puzzle video game developed by Robert Donner in 1989. The game consists of a $n$ x $m$ of grid-covered squares when the player must explore through a square revealing either a mine or an integer. This integer represents the number of mines adjacent to that clicked square. The game ends when the player probes a cell containing a mine, and the goal is to prove all uncovered squares that do not contain a mine.
+
 
 
 \vspace{5mm} %5mm vertical space
-Minesweeper allows the player to marl with a flag the position of the possible mine, but the game does not validate any flagged square, for this reason, higher levels of Minesweeper involve a greater degree of deductive reasoning: the number of mines increases. 
+Minesweeper allows the player to mark with a flag the position of the possible mine, but the game does not validate any flagged square, for this reason, higher levels of Minesweeper involve a greater degree of deductive reasoning: the number of mines increases. 
 
 
 \vspace{5mm} %5mm vertical space
@@ -95,7 +97,7 @@ b_n \\
 
 
 \vspace{5mm} %5mm vertical space
-When the $ith$ row below the pivoting equation could be transformed, thus, the element $A_{ir}$  must be eliminated. To have this, we can multiply the pivoting row by $\lambda = A_{ik} / A_{kk}$ from this row
+When the $i-th$ row below the pivoting equation could be transformed, thus, the element $A_{ij}$  must be eliminated. To have this, we can multiply the pivoting row by $\lambda = A_{ik} / A_{kk}$ from this row
 
 
 \vspace{5mm} %5mm vertical space
@@ -107,7 +109,7 @@ b_i \leftarrow b_j-\lambda b_k
 \end{equation}
 
 \vspace{5mm} %5mm vertical space
-Transforming the coefficient of the matrix to upper from, $k$ and $l$ in \ref{eq:1}, must be ranges of $k = 1, 2, ... , h-1$ (chooses the pivot row)
+Transforming the coefficient of the matrix to upper from, $k$ and $l$ in \ref{eq:1}, must be ranges of $k = 1, 2, ... , h-1$ (chooses the pivot row).
 
 
 
@@ -175,7 +177,7 @@ The solution is
 \end{algorithm}
 
 \subsection{Gauss Elimination Application}
-This technique is capable of identifying the number of free variables doing a reduction in the number of permutations needed to verify the solution.  Gauss elimination is useful to solve system linear equations. It consists of two parts:  the elimination phase and the solution phase as show table 1.1, the function to the elimination phase is to transform the equations into the form $U_x = c$. 
+This technique is capable of identifying the number of free variables doing a reduction in the number of permutations needed to verify the solution.  Gauss elimination is useful to solve system linear equations. It consists of two parts:  the elimination phase and the solution phase as shown in table 1.1, the function of the elimination phase is to transform the equations into the form $U_x = c$.
 \begin{table}[ht]
 \centering
 \caption{Phases elimination.}
@@ -188,7 +190,7 @@ Gauss Elimination&$A_x=b$&$U_x=c$2\\
 \end{tabular}
 \end{table}%
 \vspace{5mm} %5mm vertical space
-To apply these methods, I chose the configuration showing the figure \ref{fig:1}.  All non-clicked squares are labeled x1 to x5. Each of them either contains a mine or it does not:
+To apply these methods, I chose the configuration showing the figure \ref{fig:1}.  All non-clicked squares are labeled $x_1$ to $x_5$. Each of them either contains a mine or it does not:
 \vspace{5mm} %5mm vertical space
 
 \begin{figure}[h!] \label{fig:1}
@@ -205,7 +207,8 @@ To apply these methods, I chose the configuration showing the figure \ref{fig:1}
 \label{fig:1}
 \end{figure}
 
-Looking at the top left of figure above, show number one meaning the adjective top one. Then, looking for what number adjacent have the number one is 2: $x_1$ and $x_2$, therefore, is capable say that number of mines in $x_1$ and $x_2$ must add up to equal 1:
+Looking at the top left of the figure above, show number one meaning the adjective top one. Then, looking for what number adjacent has the number one is 2: $x_1$ and $x_2$, therefore, is capable say that number of mines in $x_1$ and $x_2$ must add up to equal 1:
+
 
 \begin{equation}
 x_1+x_2=1\label{eq:first}    \tag{1.5}
@@ -254,12 +257,12 @@ Negative numbers do not mean the Gauss Elimination has been failing, however, th
 Dialing each row of the matrix above in a dot point:
 
 \begin{itemize}
-  \item The first row should be able to denote that $x_1$ and $x_5$ not must be mines because $x_1$ + $x_5$ is not equal to 1,
+  \item The first row should be able to denote that $x_1$ and $x_5$ not must be mines because $x_1$ + $x_5$ is not equal to 1.
 
-  \item the second one has a negative number, which means that $x_1 - x_4 = 0$. This is true because $x_2$ is a mine and $x_4$ is not,
+  \item The second one has a negative number, which means that $x_1 - x_4 = 0$. This is true because $x_2$ is a mine and $x_4$ is not.
   \item The third one row had mines in $x_3$ and does not exist any more mines, therefore, is equal to 0.
-\item the four one row had mines in $x_4$ and $x_5$, both are mines because that is only to obtain 2.
-\item and the last one does not have mines. 
+\item The four one rows had mines in $x_4$ and $x_5$, both are mines because that is only to obtain 2.
+\item The last one does not have mines. 
 \end{itemize}
 
 Is possible to get more information from each row working at lower and upper bounds. In this case, there is only one configuration and would be applied to a row if it equal to an upper or lower bound, if it does not, multiple solutions are possible and probabilistic fields would emerge.
@@ -270,31 +273,32 @@ Is possible to get more information from each row working at lower and upper bou
 The NP(non-deterministic polynomial time) is a complexity class used in computational complexity theory to classify decision problems. Which has proof in polynomial time by a deterministic Turing Machine. 
 
 \vspace{5mm} %5mm vertical space
-In the NP class problem (all problems are solvable in polynomial time) is contained in NP; problems where his solution can be verified in polynomial time, thus, if the problems can be solved in polynomial time then his solution is also verifiable in polynomial time. However, NP contains more problems such as NP-complete. An algorithm that his resolution is in a polynomial-time must be solved also any other problem in polynomial time or P=NP? The most important NP problem.
+In the NP class problem (all problems are solvable in polynomial time) is contained in NP; problems where his solution can be verified in polynomial time, thus, if the problems can be solved in polynomial time, his solution is also verifiable in polynomial time. However, NP contains more problems such as NP-complete. An algorithm that his resolution is in a polynomial-time must be solved also any other problem in polynomial time or P=NP? The most important NP problem.
 
+\vspace{5mm} %5mm vertical space
 \subsection{Formal Definition}
 \newtheorem{corollary}{Corollary}
 
 \begin{corollary}
 Begin $ \Sigma $  be a finite alphabet set and $\Sigma$* be set of finite string over $\Sigma$, the language over $\Sigma$ is and subset $L$ of $\Sigma$* 
 \end{corollary}
-Deterministic machine $\matchcal{M}$ has an associate $\Sigma$. Each  $\matchcal{W} \in \Sigma$* exists a computation associated  $\matchcal{M}$ with $\matchcal{w}$. $\matchcal{M}$ accepts $\mathcal{W}$ if this computation accepts the state. The language  is accepted by $\matchcal{M}$,  deleted $L(\matchcal{M})$.
+Deterministic machine $\matchcal{M}$ has an associate $\Sigma$. Each  $\matchcal{w} \in \Sigma$* exists a computation associated  $\matchcal{M}$ with $\matchcal{w}$. $\matchcal{M}$ accepts $\mathcal{w}$ if this computation accepts the state. The language  is accepted by $\matchcal{M}$,  deleted $L(\matchcal{M})$.
 \begin{equation} \tag{2.5}
 L(\matchcal{M})=\left \{ \matchcal{w} \in \Sigma ^ *  \hspace{2mm}/\hspace{2mm} \matchcal{M} \hspace{2mm}accept\hspace{2mm} \matchcal{w}  \right \}
 \end{equation}
 $Tm(\matchcal{w})$ is the number of steps in the computation of $\matchcal{M}$ on $\matchcal{w}$. If the computation never halts, $Tm(\matchcal{w})$ = $\infty$. For $\matchcal{n} \in \mathbb{N}$, $Tm(\matchcal{h}$) worst-case return 
-\begin{equation}
+\begin{equation} \tag{3}
     Tm(n) = \left max\{ Tm(\matchcal{w}) \hspace{2mm} / \hspace{2mm} \matchcal{w} \in \Sigma \hspace*{2mm} n \right \}
 \end{equation}
-\begin{equation}
+\begin{equation} \tag{3.1}
     \Sigma ^ n C \Sigma = \left \{ All\hspace{2mm} string\hspace{2mm} over\hspace{2mm} \Sigma \hspace{2mm}of\hspace{2mm} length\hspace{2mm} n \right \}
 \end{equation} 
 This M runs in a polynomial time if $\exists k \forall n, Tm(\matchcal{n}) \leqslant \matchcal{n}^k + k$, thus 
-\begin{equation}
+\begin{equation} \tag{3.2}
     P = \left \{ L \hspace{2mm}/\hspace{2mm}L=L(\matchcal{m})\right \}
 \end{equation}
 For \Sigman and $\Sigma_1$, we have $R \subseteq \Sigma^*$ x $\Sigma^*_1$ when each case $\matchcal{R}$ in a language $\matchcal{LR}$ over $\Sigma U \Sigma_1 U \left \{\#\right \}$
-\begin{equation}
+\begin{equation} \tag{3.3}
 LR = \left \{ \matchcal{w} \# y / R(\matchcal{w},\matchcal{y})\right\},
 \end{equation}
 when 
@@ -303,7 +307,7 @@ when
   \item $R$ is polynomial-time if $LR \in P$
 \end{itemize}
 NP languages by $L$ over $\Sigma$ in NP $\exists k(k \in N)$ and a polynomial time in \matchcal{R} $ \exists\matchcal{w}\forall\matchcal{w}(\matchcal{w} \in k^* )$.
-\begin{equation}
+\begin{equation} \tag{3.4}
 \matchcal{w}\matchcal{w}\matchcal{L} \longleftrightarrow \exists y (\lvert  y \rvert \leqslant \lvert w \rvert^k \hspace{2mm}and \hspace{2mm} R(w,y)) \hspace{2mm} when \hspace{2mm} \lvert w \rvert, \lvert y \rvert = w,y
 \end{equation}
 
@@ -312,7 +316,9 @@ NP languages by $L$ over $\Sigma$ in NP $\exists k(k \in N)$ and a polynomial ti
 
 This game has been different in complexity, even in electrical engineering. Richard Kaye in his paper called 'Minesweeper is NP-Complete', creates a wire construct and Boolean logic gates from minesweeper configurations. Proving a polynomial-time reduction. In another way, Allan Scott in 'Minesweeper may not be NP-Complete but it had nonetheless' asks for there exists at least one covered square that his contents can be safely inferred, given us a consistent configuration to get this result Allan shows that the consistent configuration is CO-NP. One set of two consistent boards for covered squares(S is a mine and one where is not a mine). Proving that a deterministic consistency cannot be made since each covered square.
 
-Iterating through each covered square s in each possible board and s be consistent in eight neighbors. Given a board $n x m$, O(n^2m^2) time takes polynomial time.
+
+Iterating through each covered square s in each possible board and s be consistent in eight neighbors. Given a board $n$ x $m$, $O(n^2m^2)$ time takes polynomial time.
+
 
 Kaye's proof proves a similar approach as Allan defines circuits: Allan creates wires, logical operators (AND and NOT gates), and terminals allow creating any Boolean circuits.
 

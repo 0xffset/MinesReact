@@ -22,7 +22,7 @@
 
 ### Installation 
 ~~~
-# git https://github.com/RolEYder/MinesReact.git && cd MinesReact
+# git clone https://github.com/RolEYder/MinesReact.git && cd MinesReact
 # npm install 
 ~~~
 

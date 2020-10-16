@@ -13,7 +13,7 @@
   <h2>Abstract</h1>
 </div>
 <div align="center">
-<p>In this paper, we explore different mathematical approaches in Minesweeper like computa-tional algorithms, NP-Complexity, and matrix analysis. In the processes, I present strategiesto satisfy computational complex algorithms such as heuristic h-neighbor adjacent.</p>
+<p>In this paper, we explore different mathematical approaches in Minesweeper like computational algorithms, NP-Complexity, and matrix analysis. In the processes, I present concepts like Gauss Elimination and the formal NP definition.</p>
 </div>
 
 ### Paper files
